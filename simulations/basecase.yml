@@ -1,0 +1,31 @@
+simulation:
+  n: 200
+  m: 400
+  dt: 0.0001
+  tmax: 15.0
+
+ions:
+  D: 0.0353
+  Zpp: 1.4
+  Zpm: -1.6
+  α: 1.6e-6
+  p: 1.0e7
+
+geometry:
+  R: 1.5875
+  L: 18.7
+  Lb1: 3.175
+  Lb2: 13.525
+  S: 1.27
+  Ls1: 7.61
+  Ls2: 10.15
+
+flow:
+  rate: 0.45
+
+potential:
+  v1: 100.0
+  v2: 0.0
+
+outputfile:
+  name: output/basecase.jld2

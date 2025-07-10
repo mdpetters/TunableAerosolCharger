@@ -1,0 +1,26 @@
+geometry:
+  Ls2: 10.05
+  S: 1.27
+  Ls1: 7.510000000000001
+  Lb1: 3.175
+  L: 18.7
+  R: 1.5875
+  Lb2: 13.525
+simulation:
+  tmax: 15.0
+  m: 400
+  dt: 5.0e-5
+  n: 200
+outputfile:
+  name: "output/productionseries2.jld2"
+potential:
+  v2: 0.0
+  v1: -100
+flow:
+  rate: 0.45
+ions:
+  Zpp: 1.4
+  D: 0.0353
+  α: 1.6e-6
+  Zpm: -1.6
+  p: 1.0e7

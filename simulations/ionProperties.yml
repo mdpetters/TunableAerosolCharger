@@ -1,0 +1,12 @@
+thermo:
+  T: 293.15    # Temperature [K]
+  p: 101315.0  # Pressure [Pa]
+
+ions:
+  Zpp: 1.4     # Mobility of positive ions [cm2 V-1 s-1]
+  Zpm: -1.6    # Mobility of negative ions [cm2 V-1 s-1]
+  mip: 140.0   # Molar mass of positive ions [g mol-1]
+  mim: 101.0   # Molar mass of negative ions [g mol-1]
+
+particle:
+  epsilon: 4.0 # Dielectric constant of particle [-]
