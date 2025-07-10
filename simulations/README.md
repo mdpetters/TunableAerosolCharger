@@ -9,7 +9,7 @@ The following packages need to be installed before the code can be used.
 ```julia
 julia> using Pkg
 julia> Pkg.add(["YAML", "JLD2", "Interpolations", "OrdinaryDiffEq", "Plots", "Roots", "QuadGK", "DataFrames", "CSV", "Random"])
-julia> Pkg.add(["https://github.com/mdpetters/TunableAerosolCharger.git"])
+julia> Pkg.add(url = "https://github.com/mdpetters/TunableAerosolCharger.git")
 ```
 
 ## Source Code
