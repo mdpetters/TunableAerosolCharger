@@ -168,4 +168,4 @@ p = plot(
 )
 
 savefig(p, "f03.png")
-FigureServer.pushhtml1("f03.png")
+# FigureServer.pushhtml1("f03.png")

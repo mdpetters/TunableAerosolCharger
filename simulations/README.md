@@ -1,5 +1,17 @@
 # Ion-Field Simulations
 
+## Julia Language
+
+All code is written in the Julia language. You can download the current version of the Julia language here: [https://julialang.org/install/](https://julialang.org/install/). The code was developed and tested using Julia version 1.11.5.
+
+The following packages need to be installed before the code can be used.
+
+```julia
+julia> using Pkg
+julia> Pkg.add(["YAML", "JLD2", "Interpolations", "OrdinaryDiffEq", "Plots", "Roots", "QuadGK", "DataFrames", "CSV", "Random"])
+julia> Pkg.add(["https://github.com/mdpetters/TunableAerosolCharger.git"])
+```
+
 ## Source Code
 
 The source code for the simulations is in the `src/` directory. These files contain the numerical implementation of to solve the governing equations in the manuscript.
@@ -16,16 +28,7 @@ To run a single simulation from a shell script call
 $ julia simulation.jl input/vseries1.yml
 ```
 
-This starts the simulation with the input file `vseries1.yml` located in the `input` directory. Note that the required packages need to be installed before the code runs
-
-```julia
-julia> using Pkg
-julia> Pkg.add(["YAML", "JLD2", "Interpolations", "OrdinaryDiffEq", "Plots", "Roots", "QuadQK", "DataFrames", "CSV", "Random"])
-julia> Pkg.add(["https://github.com/mdpetters/TunableAerosolCharger.git"])
-```
-The output file and directory is defined in the YAML input file. Output is written in `JLD2` file format, which is a hierarchical file format in the Julia language.
-
-Simulations may take several hours to complete. To run simulations in the background, this command can be used. All output is printed to a log file in the log directory.
+This starts the simulation with the input file `vseries1.yml` located in the `input` directory. The output file and directory is defined in the YAML input file. Output is written in `JLD2` file format, which is a hierarchical file format in the Julia language. Simulations may take several hours to complete. After about 1 min, the code will print out the first time step to the terminal. To run simulations in the background, this command can be used. All output is printed to a log file in the log directory.
 
 ```bash
 $ julia simulation.jl input/vseries1.yml 2>&1 | tee log/vseries1.txt &
@@ -47,4 +50,4 @@ The `csv` files can also be loaded to further evaluate the charge conditioner ou
 
 # Reading the JLD files
 
-Example scripts generating Figure 2 (`f02.jl` and Figure 3 (`f03.jl`)in the manuscript are included. These scripts illustrate how to read the JLD files and extract the ion concentration and electric field strength.
+Example scripts generating Figure 2 (`f02.jl`) and Figure 3 (`f03.jl`)in the manuscript are included. These scripts illustrate how to read the JLD files and extract the ion concentration and electric field strength.

@@ -106,4 +106,4 @@ p = plot(
 )
 
 savefig(p, "f02.png")
-FigureServer.pushhtml1("f02.png")
+# FigureServer.pushhtml1("f02.png")
